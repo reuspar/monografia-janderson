@@ -1,4 +1,70 @@
 \label{chapter:correlatos}
+
+\par
+\textcolor{red}{Neste capítulo serão apresentados alguns trabalhos relacionados que envolvem mineração de dados...} 
+
+\section{Mineração de Dados Educacionais nos Resultados do ENEM de 2015}
+
+\par
+O trabalho de \citeonline{Simon2017} tem como objetivo em gerar um modelo preditivo da base de desempenho médio na área de ciências da natureza e suas tecnologias dos alunos de escolas do ensino médio, baseado nos dados públicos obtidos do Exame Nacional do Ensino Médio (ENEM) de 2015. Tal motivação foi pelo fato do cenário preocupante do baixo desempenho dos alunos do ensino básico no Brasil, conforme os dados de 2015 do PISA (\textit{Programme for International Students Assessment}).
+
+\par
+Segundo \citeonline{Simon2017} foi feito o pré-processamento dos dados do ENEM fornecidos pelo INEP, sendo que para cada área avaliada apresentavam-se 25 colunas que representavam uma informação ou variável, onde cada uma delas eram divididas em três categorias: características da escola, indicadores e desempenho. Das 25 variáveis, apenas 9 foram selecionadas como importante para a mineração de dados conforme o indicador da coluna Id representado na Figura 11. 
+
+\begin{figure}[!htp]
+	\begin{center}
+    \caption{\label{fig:waveform_fig} Variáveis disponibilizadas pelo ENEM por escola.}
+	\includegraphics[scale=0.99]{Figuras/Tabela_ENEM.png}
+	\end{center}
+    \legend{Fonte:\cite{Simon2017}}
+\end{figure}
+
+\par
+\citeonline{Simon2017} destacaram que a variável Média Escola indicava o desempenho médio dos alunos da escola na área de ciências da natureza e suas tecnologias, onde esses dados eram fornecidos como valor numérico pelo INEP, então para facilitar a mineração dos dados, ele teve que converte-lo para uma categoria mais limitada que foi dividida em quatro valores possíveis, segundo a escala prevista pelo INEP conforme a Figura 12. Os dados fornecido pelo INEP, vinham em uma planilha no formato .xlsx e teve que ser convertido para .csv, pois, o formato não era suportado pelo software WEKA.
+
+
+\begin{figure}[!htp]
+	\begin{center}
+    \caption{\label{fig:waveform_fig} Categoria para os valores Média Escola.}
+	\includegraphics[scale=0.50]{Figuras/Tabela_ENEM_2.png}
+	\end{center}
+    \legend{Fonte:\cite{Simon2017}}
+\end{figure}
+
+\par
+Relacionando os fatores socioeconômicos e o índice de desempenho médio em ciências da natureza e sua tecnologias dos alunos, \citeonline{Simon2017} construiu um modelo preditivo utilizando a técnica de mineração de árvore de decisão. Tal técnica, usou o algoritmo j48 através do software WEKA, que foi executado utilizando a opção de \textit{cross-validation}, onde o valor para \textit{fold} era igual a 10 e com a variável depedente Média Escola. Com a árvore obtida, demonstrou como variável independente mais relevante foi a variável Tipo Escola, que se divide entre quatro valores: privada, federal, estadual e municipal.
+
+%Variavel dependete seria o resultado e a variavel independente seria o caminho que ele iria percorre até o resultado. Exemplo: variavel dependete (aluno passou | aluno não passou), variavél independente(entregou os trabalhos, participou das aulas, tirou nota boa na prova, numeros de faltas e etc).
+
+\par
+Depois da variável Tipo Escola, a variável hierarquicamente seguinte é a Nível socioeconômico e a partir dela as váriaveis seguintes se alternam de posição conforme as funções dos valores dos níveis superiores. Como resultado, sobre o desempenho médio dos alunos na área de ciências da natureza e suas tecnologias, as categorias que mais se destacaram foram a III e IV, acima de 550 pontos, que ocorreram nas escolas: privadas e estaduais com o nível socioeconômico muito alto, federais com o nível médio alto e muito alto e municipal com o nível médio alto.
+
+\par
+\textcolor{red}{Há alguns pontos deste trabalho que se relacionam ao trabalho que pretendo fazer, uma delas é a base de dados dos fatores socioeconômico e outras informações fornecidos do ENEM pelo INEP, que esta relacionado na parte de pré-processamento, é semelhante aos dados fonecidos pela Comissão Permanente do Vestibular (CPV) da UFRR, como base eu poderia pegar as mesmas variáveis que foram escolhidas no trabalho de \citeonline{Simon2017} para agilizar o meu trabalho de minerar os dados mais imporntante para solucionar o meu problema.}
+\par
+\textcolor{red}{Outro ponto importante é o modelo preditivo que ele abordou, que é a técnica de mineração de árvore de decisão que utiliza o algoritmo J48 do software WEKA, já que eu utilizarei a mesmo conceito de modelo, poderia utilizar a opção de \textit{cross-validation}, no caso o K-\textit{folds}, que ele usou para os treinos e testes dos dados para a validação do modelo.}
+
+
+
+\section{Prática de Mineração de Dados no Exame Nacional do Ensino Médio}
+
+\par
+O trabalho de \citeonline{Silva2014}, apresenta um estudo de mineração de dados educacionais, mais especificamente, utilizando a tarefa de Associação de Dados de MD no intuito de encontrar padrões de regras nos dados dos questionários socioeconômicos e resultados das provas do Exame Nacional de Ensino Médio (ENEM), fornecidos pelo INEP. O objetivo é de executar as etapas do KDD para o processamento dos dados do ENEM, de modo que por consequência, se utilize a técnica de associação para se encontrar regras proporsicionais que relacionam os fatores socioeconômicos do candidato com o seu desempenho na prova.
+
+\par
+Para o trabalho de \citeonline{Silva2014}, foi utilizado o banco de dados com os questionários socioeconômico e os desempenhos da prova do ENEM de 2010, fornecido pelo INEP, onde, para acessar os dados do banco dele, foi usado os softwares Oracle Express Edition 11g e PL/SQL Developer que permitem a extração dos dados que foram determinado para o foco da pesquisa. Os dados utilizados para fazer a mineração de dados, foi da região Sudeste das suas capitaias: Vitória, Belo Horizonte, São Paulo e Rio de Janeiro.
+
+\par
+Na parte de pré-processamento, foi selecionado somente os dados das capitais do Sudeste que resultaram em 452.710 alunos, que entretanto, foram eliminados 310.000 alunos das quatros capitais, pois, eles não compareceram no dia da prova. As questões selecionadas para a pesquisa  foram de quantas pessoas moravam com o candidato, a renda familiar mensal, o nível de escolaridade da mãe e o tipo de escola que cursou no ensino médio. Sendo que essas questões foram analisadas para saber se contribuia, interferia ou afetava a nota e o desempenho do candidato na prova.
+
+\par
+
+
+
+
+
+
+
 %==========================================================
 % REVISÃO SISTEMÁTICA
 %==========================================================
