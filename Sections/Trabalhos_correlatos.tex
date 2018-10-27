@@ -58,12 +58,89 @@ Para o trabalho de \citeonline{Silva2014}, foi utilizado o banco de dados com os
 Na parte de pré-processamento, foi selecionado somente os dados das capitais do Sudeste que resultaram em 452.710 alunos, que entretanto, foram eliminados 310.000 alunos das quatros capitais, pois, eles não compareceram no dia da prova. As questões selecionadas para a pesquisa  foram de quantas pessoas moravam com o candidato, a renda familiar mensal, o nível de escolaridade da mãe e o tipo de escola que cursou no ensino médio. Sendo que essas questões foram analisadas para saber se contribuia, interferia ou afetava a nota e o desempenho do candidato na prova.
 
 \par
+Baseado nas respostas das questões analisadas, a nota da prova objetiva foi classificada conforme o conceito mostrada na Figura 13. Para a preparação da regra de associação, \citeonline{Silva2014} fez uma limpeza e integração nos dados, alterando as colunas principais para binominais, quer dizer, em 0 e 1, sendo 1 a opção que foi respondida no questionairo e 0 para o restante das opções que não foram escolhida no mesmo questionario, isso aplica tambem a categoria da prova, como podemos ver representado na Figura 14, onde o aluno não foi inserido sendo três de quatro delas. 
 
 
+\begin{figure}[!htp]
+	\begin{center}
+    \caption{\label{fig:waveform_fig} Relação de tranformação da nota em conceito.}
+	\includegraphics[scale=0.50]{Figuras/Prova_objetiva.png}
+	\end{center}
+    \legend{Fonte:\cite{Silva2014}}
+\end{figure}
+
+\begin{figure}[!htp]
+	\begin{center}
+    \caption{\label{fig:waveform_fig} Amostragem de alguns dos dados limpos e integrados.}
+	\includegraphics[scale=0.49]{Figuras/Dados_limpos_integrados.png}
+	\end{center}
+    \legend{Fonte:\cite{Silva2014}}
+\end{figure}
+
+\par
+Observando a segunda linha da Figura 14, percebemos que o candidato é da cidade de Belo Horizonte, mora no total de sete pessoas contando com ele, a mãe dele possui o 1º grau de nível de escolaridade e que a classificação da nota da prova objetiva dele é regular. Para o melhor entendimento, \citeonline{Silva2014} especifica os critérios das colunas, que são:
+
+\begin{itemize}
+    \item \textbf{NU\_INSCRICAO:} O numero de identificação do candidato. 
+    \item \textbf{UFXX:} A sigla da cidade onde o candidato mora.
+    \item \textbf{QXXABC:} Sendo XX a questão escolhida de acodo com o questionario socioeconômico, ABC representa alternativa escolhida da questão de forma abreviada.
+    \item \textbf{NOTAXXX:} Sendo XXX a classificação da nota da prova que o candidato conseguiu. 
+\end{itemize}
+
+\par
+Para os experimentos que foram feitos, \citeonline{Silva2014} utilizou o software RapidMiner 5.1 que usa o codigo abeto Java, e para a tarefa de associação de dados, é usado o algoritmo A Priori que na etapa de verificação de itens conjuntos ele faz um processo interativo para a combinação de itens. Este algoritmo realiza busca por largura e é definido em três caracteristicas: suporte mínimo, confinaça mínima e K-itemset. Lembrando que o suporte é a frequência o qual uma regra é aplicada em um determinado conjunto de dados e a confiança mede a confiabilidade da interferência feita por uma regra. 
+
+\par
+Conforme a Figura 15, \citeonline{Silva2014} observou que a medida que o suporte e a confiança diminuia, o número de regras aumentava.   
+
+\begin{figure}[!htp]
+	\begin{center}
+    \caption{\label{fig:waveform_fig} Simulação de Suporte e Confiança.}
+	\includegraphics[scale=0.49]{Figuras/Simulacao_suporte_confianca.png}
+	\end{center}
+    \legend{Fonte:\cite{Silva2014}}
+\end{figure}
+
+\par
+Das quatros simulações, em cada uma se analisou o seguinte: na simulação 1, a regra aplicada era se o aluno era de ecola publica então a sua nota prova seria regular (76\% de confiança, ocorre 53\% dos alunos) e a outra regra se o aluno tirou nota regular na prova então ele é de escola publica (80\% de confiança, ocorre 53\% dos alunos). Na simulação 2 a primeira regra com confiança mais baixa gerada era se o candidato morasse com quartro e sete pessoas então ele era de escola pública (74\% de confiança, ocorre 31\% dos alunos) e a ultima regra com maior confiança era se os pais tivessem escolaridade de até o primeiro grau então ele era de escola pública (89\% de confiança, ocorre 36\% dos alunos).
+
+\par
+Na simulação 3, a primeira regra gerada de menor confiança é se os pais tivessem escolaridade de até o 1º grau então o candidato é de escola pública e a nota da prova é regular (71\% de confiança, ocorre 28\% dos alunos), e a ultima regra com maior confiança e se o candidato é de escola pública e possui pais com escolaridade de até o 1º grau, então sua nota da prova é regular (90\% de confiança, ocorre 19\% dos alunos). Na simulação 4, \citeonline{Silva2014} observou que alguns atributos como escolaridade dos pais e a renda familiar levava o candidato a obter uma nota regular ou vim de uma escola pública, como podemos perceber na ultima regra com maior confiança na Figura 16.
+
+% Podemos evidenciar na penúltima regra que, se o aluno tirou nota regular na prova, os pais tiveram escolaridade até o primeiro grau e a renda da família for de um a três salários mínimos então o aluno estudou em escola pública com 92% de confiança, ocorrendo em 19% dos alunos
+
+\begin{figure}[!htp]
+	\begin{center}
+    \caption{\label{fig:waveform_fig} Simulação 4, Suporte Mínimo 25\% e Confiança Mínima 70\%.}
+	\includegraphics[scale=0.49]{Figuras/Simulacao_quatro.png}
+	\end{center}
+    \legend{Fonte:\cite{Silva2014}}
+\end{figure}
+
+\par
+Como representado na Figura 17, \citeonline{Silva2014} verificou que ao diminuir o valor do suporte mínimo, há um acréscimo em casos encontrados na base de dados que utiliza associação de dados, em que se term regras mais verdadeiras, chegando pelo menos a 90\% de confiança, que são geradas na simulação correspondentes. Para a demonstração, \citeonline{Silva2014} criou faixas de confinças que começava a partir de 70\%, onde, cada faixa era verificada entre as simulações com a quantidade de regras que eram geradas, como por exemplo, na simulação 1, dentre as duas regras, se tinha de 76\% e 81\% de confiança, então ele se enquadra na faixa de 70\% até 80\%, totalizando 50\%..
+
+\begin{figure}[!htp]
+	\begin{center}
+    \caption{\label{fig:waveform_fig} Sintetização das simulações.}
+	\includegraphics[scale=0.49]{Figuras/Sintetizacao_simulacoes.png}
+	\end{center}
+    \legend{Fonte:\cite{Silva2014}}
+\end{figure}
+
+\par
+Contudo, nas regras de maior confinaça obtidos com base nas duas ultimas simulações, \citeonline{Silva2014} verificou que candidatos de São Paulo que moram com quatro a sete pessoas, com renda familiar de até trê salarios mínimos, com pais de escolaridade de até 1º grau e com a nota regular obtida no ENEM, então ele é de escola pública, o que reforça que a educação das escolas públicas das capitais da região sudeste está em um nível baixo. Então \citeonline{Silva2014} conclui que com o conhecimento obtido a partir dos resultados, como alta quantidade de pessoas que moram com o candidato, baixa renda familiar e pais com escolaridade de nível primário, são atributos que afetam o baixo desempenho do candidato. 
+
+\textcolor{red}{No trabalho de \citeonline{Silva2014}, demonstra casos semelhantes que irá ocorre no meu tralho, como por exemplo, utilizar dados obtidos do questionario socioeconômico pelo INEP (que no meu caso será pelo CPV), para poder relacionar qual destas questões é um dos motivos que afetam o desempenho do candidato na prova, outro ponto, é a eliminação de ruído de dados na parte de pré-processamento, já que nem todos os candidatos inscritos para o vestibular, por algum motivo, não comparecerão para fazer a prova, então será nescessario tirar os candidatos que não participaram.}
+
+\par
+\textcolor{red}{O algoritmo que \citeonline{Silva2014} utilizou para a mineração de dados foi o A Priori, que faz a verificação dos dados através de um processo interativo para combina-los, para então se obter um resultado. Como observado, poderia utilizar como exemplo as técnicas, algoritmo e as questões escolhidas do questionério socioecnômico abordados pelo \citeonline{Silva2014} em conjunto com as outras técnicas e outros conceitos apresentado no meu trabalho, para poder assim, obter mais exatidão e aprimoraramento nos resultados obtidos.}
 
 
+\section{Descoberta de Conhecimento Sobre o Processo Seletivo da UFPR}
 
-
+\par
+O trabalho de \citeonline{Martinhago2005}, tem como objetivo geral de traçar o perfil dos candidatos ao processo de seleção para a admissão no ensino superior da Universidade Federal do Paraná (UFPR) do campus de Curitiba, utilizando a técnica de mineração de dados Árvore de Decisão através dos algoritmos de classificação J48.J48 e J48.PART, implementados pelo software WEKA. \citeonline{Martinhago2005} utilizou a base de dados dos questionarios socio-educacional realizado durante a inscrição do vestibular realizado em 2003, os dados do cadastro geral e os dados das notas obtidas nas provas e redação, em conjunto com a nota, média das notas e os status(resultado do vestibula) do candidato pelo ENEM. 
 
 %==========================================================
 % REVISÃO SISTEMÁTICA
