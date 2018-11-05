@@ -42,7 +42,7 @@ Depois da variável Tipo Escola, a variável hierarquicamente seguinte é a Nív
 \par
 \textcolor{red}{Há alguns pontos deste trabalho que se relacionam ao trabalho que pretendo fazer, uma delas é a base de dados dos fatores socioeconômico e outras informações fornecidos do ENEM pelo INEP, que esta relacionado na parte de pré-processamento, é semelhante aos dados fonecidos pela Comissão Permanente do Vestibular (CPV) da UFRR, como base eu poderia pegar as mesmas variáveis que foram escolhidas no trabalho de \citeonline{Simon2017} para agilizar o meu trabalho de minerar os dados mais imporntante para solucionar o meu problema.}
 \par
-\textcolor{red}{Outro ponto importante é o modelo preditivo que ele abordou, que é a técnica de mineração de árvore de decisão que utiliza o algoritmo J48 do software WEKA, já que eu utilizarei a mesmo conceito de modelo, poderia utilizar a opção de \textit{cross-validation}, no caso o K-\textit{folds}, que ele usou para os treinos e testes dos dados para a validação do modelo.}
+\textcolor{red}{Outro ponto importante é o modelo preditivo que eles abordaram, que é a técnica de mineração de Árvore de Decisão que utiliza o algoritmo J48 do software WEKA, já que eu utilizarei a mesmo conceito de modelo, poderia utilizar a opção de \textit{cross-validation}, no caso o K-\textit{folds}, que ele usou para os treinos e testes dos dados para a validação do modelo.}
 
 
 
@@ -131,36 +131,64 @@ Como representado na Figura 17, \citeonline{Silva2014} verificou que ao diminuir
 \par
 Contudo, nas regras de maior confinaça obtidos com base nas duas ultimas simulações, \citeonline{Silva2014} verificou que candidatos de São Paulo que moram com quatro a sete pessoas, com renda familiar de até trê salarios mínimos, com pais de escolaridade de até 1º grau e com a nota regular obtida no ENEM, então ele é de escola pública, o que reforça que a educação das escolas públicas das capitais da região sudeste está em um nível baixo. Então \citeonline{Silva2014} conclui que com o conhecimento obtido a partir dos resultados, como alta quantidade de pessoas que moram com o candidato, baixa renda familiar e pais com escolaridade de nível primário, são atributos que afetam o baixo desempenho do candidato. 
 
-\textcolor{red}{No trabalho de \citeonline{Silva2014}, demonstra casos semelhantes que irá ocorre no meu tralho, como por exemplo, utilizar dados obtidos do questionario socioeconômico pelo INEP (que no meu caso será pelo CPV), para poder relacionar qual destas questões é um dos motivos que afetam o desempenho do candidato na prova, outro ponto, é a eliminação de ruído de dados na parte de pré-processamento, já que nem todos os candidatos inscritos para o vestibular, por algum motivo, não comparecerão para fazer a prova, então será nescessario tirar os candidatos que não participaram.}
+\textcolor{red}{No trabalho de \citeonline{Silva2014}, demonstra casos semelhantes que poderar ocorrer no meu tralho, como por exemplo, utilizar dados obtidos do questionario socioeconômico pelo INEP (que no meu caso será pelo CPV), para poder relacionar qual destas questões é um dos motivos que afetam o desempenho do candidato na prova, outro ponto, é a eliminação de ruído de dados na parte de pré-processamento, já que nem todos os candidatos inscritos para o vestibular, por algum motivo, não comparecerão para fazer a prova, então será nescessario tirar os candidatos que não participaram.}
 
 \par
 \textcolor{red}{O algoritmo que \citeonline{Silva2014} utilizou para a mineração de dados foi o A Priori, que faz a verificação dos dados através de um processo interativo para combina-los, para então se obter um resultado. Como observado, poderia utilizar como exemplo as técnicas, algoritmo e as questões escolhidas do questionério socioecnômico abordados pelo \citeonline{Silva2014} em conjunto com as outras técnicas e outros conceitos apresentado no meu trabalho, para poder assim, obter mais exatidão e aprimoraramento nos resultados obtidos.}
 
+\par
+\textcolor{red}{Um possível problema que eu encontraria se eu fosse basear os exemplos de \citeonline{Silva2014}, é que as questões do questionario socioeconômico fornecidas pelo INEP vem com alternativas de escolha para o candidato responder, o que é diferente das questões fornecido pelo CPV que é resposta direta, um exemplo de uma das questões do questionario socioecômico do ENEM, a questão sobre a quantidade de pessoas que moram com o candidatos, se tem as seguintes alternativas: (a) três pessoas, (b) quatro pessoas, (c) sete pessoas e (d) mais de sete pessoas.}
 
 \section{Descoberta de Conhecimento Sobre o Processo Seletivo da UFPR}
 
 \par
-O trabalho de \citeonline{Martinhago2005}, tem como objetivo geral de traçar o perfil dos candidatos ao processo de seleção para a admissão no ensino superior da Universidade Federal do Paraná (UFPR) do campus de Curitiba, utilizando a técnica de mineração de dados Árvore de Decisão através dos algoritmos de classificação J48.J48 e J48.PART, implementados pelo software WEKA. \citeonline{Martinhago2005} utilizou a base de dados dos questionarios socio-educacional realizado durante a inscrição do vestibular realizado em 2003, os dados do cadastro geral e os dados das notas obtidas nas provas e redação, em conjunto com a nota, média das notas e os status(resultado do vestibula) do candidato pelo ENEM. 
+O trabalho de \citeonline{Martinhago2005}, tem como objetivo geral de traçar o perfil dos candidatos ao processo de seleção para a admissão no ensino superior da Universidade Federal do Paraná (UFPR) do campus de Curitiba, utilizando a técnica de mineração de dados Árvore de Decisão através dos algoritmos de classificação J48.J48 e J48.PART, implementados pelo software WEKA. \citeonline{Martinhago2005} utilizou a base de dados dos questionarios socio-educacional realizado durante a inscrição do vestibular feito em 2003, os dados do cadastro geral e os dados das notas obtidas na prova e redação, em conjunto com a nota, média das notas e os status (resultado do vestibula) do candidato pelo ENEM. 
+
+\par
+Na fase de Pré-processamento, na parte de seleção de dados, \citeonline{Martinhago2005} juntou os 31 itens do questionario sócio-educacional com os 24 itens do cadastro geral, para formar uma planilha com base de dados de 55 itens (atributos), para servir como base referêcial para aplicação das técnicas de mineração. Ao analisar a base de dados, foi detectado inúmeros itens de dados em branco, valores absusrdos ou erro de digitação, logo, \citeonline{Martinhago2005} teve que prencher esses dados com a letra N (NULL), pois, a ferramenta WEKA que foi utilizado, nescessita que todos os registros estejam preenchidos. Também foi eliminado atributos que eram repetidos por causa da junção das duas planilha e dados que eram irrelevante para a pesquisa, tais como protocolo, bairro, CEP e etc.
+
+\par
+Na fase de Mineração de Dados, \citeonline{Martinhago2005} utilizou a ténica de classificação de mineração, a Árvore de decisão, utilizando o algoritmo J48 através do software WEKA, para a criação do modelo preditivo aplicado na base de dados obtidos de 46.532 candidatos. No momento, foram realizado testes onde foi selecionado alguns atributos, tais como, idade, sexo, notas e etc, nos testes seguinte, foi utilizado os mesmos atributos dos testes anteriores em conjunto com alguns atributos culturais e sócio-educacional, tais como, o turno cursado (se fez cursinho ou não), o tipo de escola e etc. Sucessivamente, foram realizados outros testes com outro atributos.
+
+\par
+Utilizando o algoritmo J48, em cada execução, varias regras foram geradas e o resultados obtidos para cada base de dados analisados foi o seguinte: para a base de dados dos candidatos ao 11 cursos mais concorridos, \citeonline{Martinhago2005} observou que o conjuntos de notas categorizados com valores acima da faixa de 5 pontos, influênciam na aprovação do candidato, principalmente as notas de redação e língua portuguesa e outras em geral, outra regra relevante, foi de candidatos com notas na faixa de 6 pontos (4,208 a 8,969 pontos) ou acima no ENEM, alcançaram sucesso do vestibular, um exemplo, candidatos para o curso de Direito que obtem nota em Química, Biologia e Matemática acima da faixa de 5 pontos (4,91 a 9,80), segundo \citeonline{Martinhago2005} geralmente tem chance de ser classificado após a análise da redação.
+
+\par
+Para o curso mais concorrido, que no caso foi Medicina, segundo \citeonline{Martinhago2005} as notas obtidas nas provas do vestibular e o do ENEM, foi o principal fator que influenciou na aprovação do candidato ao contrário dos fatores sócio-econômico e culturais, que não foram considerados relevantes nos testes realizados, sendo que nas pesquisas do INEP, fatores como renda familiar, escolaridade dos pais, ter feito cursos de pré vestibular e ter estudado em escola particular ou pública, seriam determinates para influenciar a aprovação do candidato no vestibular para o curso de Medicina, porém, mesmo não sendo os principais fatores que influenciam, ainda sim as condições sócio-econômicas interferem na aprovação desse curso. 
+
+\par
+Para a base de dados dos candidatos aos onze cursos menos concorridos, através das regras geradas nos testes, segundo \citeonline{Martinhago2005} a notas que influênciaram na aprovação dos candidatos foi em Geografia, Redação, Língua Estrangeira e História e as notas que não foram importantes para aprovação eram Matemática, Química e Física. \citeonline{Martinhago2005} percebeu que uma das regras mais importante como a escolaridade dos pais, influênciavam na aprovação. Alguns dos fatores interessantes que foram extraídos é de que nos cursos menos concorridos os candadatos que foram aprovados, tinham concluído o Ensino Médio a mais de 5 anos e que vinham de escolas públicas ao contrário dos cursos mais concorridos onde essa relação não era frequente, outro fator, é de o candidato ter ou não feito cursinho, não influenciava no resultado.
+
+\par
+Para a base de dados contendo os dados de todos os candidatos ao vestibular, \citeonline{Martinhago2005} notou que para as regras geradas, a maioria dos candidatos moram com os pais, não trabalham e que estão em uma faixa de 17 a 20 anos. Observou também, que as pontuações obtidas pelos candidatos para um curso onde na área dele a nota de algumas disciplinas são essênciais para o vestibular, não tem tanta influência no resultado como a pontuação obtida em outras disciplinas de outras áreas, por exemplo na área de exatas, como o curso de Estatística onde as notas de Geografia, Língua estrangeira e História influenciam na aprovação do candidato, ao contrário da área de humanas como Ciências Sociais, onde notas como Matemática, Física e Química, influenciam nos resultados de aprovação. 
+
+\textcolor{red}{Assim como os trabalhos anteriores que são semelhantes ao que eu proponho, o trabalho de \citeonline{Martinhago2005} usa como base de dados para o seus experimentos os dados dos questionários sócioeconômico e os dados do cadastro geral dos candidatos do vestibular da UFPR para o seus testes de mineração, a diferença é que \citeonline{Martinhago2005} fez junção com alguns dados forncecidos pelo ENEM para produzir mais regras e ter um melhor resultado na sua predição. Outro fator semelhante é que é utilizado a técnica de mineração a Árvore de Decisão usando o algoritmo J48 pela ferramenta WEKA para a geração de regras para se obter os resultados. Assim como \citeonline{Martinhago2005} encontrou alguns dados em branco e atributos repetidos e teve que adaptar para o software WEKA, presumo que encontrarei o mesmo problema durante a seleção e pré-processamento de dados.}
 
 %==========================================================
 % REVISÃO SISTEMÁTICA
 %==========================================================
-\section{Revisão sistemática}
-A revisão sistemática consiste em um método de identificação, analise e interpretação de pesquisas relevantes em determinada área ou questão de pesquisa. Para execução da revisão sistemática requer esforço maior, em comparação as pesquisas tradicionais, sendo necessário seguir uma sequência de passos metodológicos sobre a área ou questão de pesquisa ao qual deseja ser feita a pesquisa\cite{kitchenham2004procedures}.
+\section{Síntese dos Trabalhos Correlatos}
 
-Para a execução da revisão sistemática, é necessário um esforço considerável, se comparado a uma revisão informal a literatura. Enquanto que a revisão de literatura informal é conduzida de forma ad-hoc, sem planejamento e critérios de seleção estabelecidos a priori, a revisão sistemática requer um protocolo formal bem definido, com uma sequência de passos metodológicos, para conduzir uma pesquisa sobre o tema ao qual deseja-se realizar a pesquisa \cite{MafraTravassos}.
+\par
+\textcolor{red}{Foram analisados na literatura, trabalhos que discorrem sobre a utilização de mineração de dados em uma base de dados de um vestibular, para a criação de um modelo preditivo através de regras criadas, a fim de gerar perfis dos candidatos que são aprovados ou saber quais foram os fatores que afetaram ou contribuiram no desempenho do candidato na sua nota da prova.} 
 
-A aplicação da revisão sistemática requer que seja seguido um conjunto bem definido e sequencial de passos, seguindo um protocolo de pesquisa desenvolvido previamente. Através deste método é possível realizar uma extensa pesquisa, contemplando uma grande quantidade de informações sobre o assunto pesquisado\cite{MafraTravassos}. Este protocolo é construído considerando um tema específico que representa o elemento central da investigação, onde os passos da pesquisa, as estratégias definidas para coletar as evidências e o foco das questões de pesquisa são definidas explicitamente, de tal forma que outros pesquisadores sejam capazes de reproduzir o mesmo protocolo de pesquisa\cite{biolchini2005systematic}.
+\par
+\textcolor{red}{Em \cite{Simon2017}, motivados pelos problemas de infraestrutura apresentados pelo Censo Escolar da Educação Básica de 2016, criaram um modelo preditivo que relacionava o perfil socioeconômico dos candidatos fornecidos pelo INEP com a infraestrutura das escolas apresentados pelo PISA para associar ao desempenho dos alunos em exames, no caso, a prova do ENEM.}
 
-Segundo \cite{MafraTravassos}, o processo para a condução de revisões sistemáticas envolve três etapas:
-\begin{enumerate}
-\item \textbf{Planejamento da Revisão:} os objetivos da pesquisa são listados e o protocolo da revisão é definido.
-\item \textbf{Condução da Revisão:}nesta atividade, as fontes para a revisão sistemática são selecionadas, os estudos primários são identificados, selecionados e avaliados de acordo com os critérios de inclusão, exclusão, e de qualidade estabelecidos durante o protocolo da revisão.
-\item \textbf{Análise dos Resultados:} os dados dos estudos são extraídos e sintetizados para análise e apresentação
-dos resultados.
-\end{enumerate}
+\par
+\textcolor{red}{\citeonline{Silva2014}, em suas pesquisas identificaram fatores que diminuem o desempenho dos candidatos, através da técnica de mineração baseada em regras de associação que utilizavam diferentes parametrizações do algoritmo A Priori. Dados esses utilizados dos questionários socioeconômicos preenchidos pelos candidatos nas edição de 2010 do ENEM da região Sudeste. Essas informações, especificamente as respostas de quatro perguntas, são relacionadas com o resultado de desempenho desses alunos.}
 
-Entretanto, como o objetivo deste trabalho é realizar um estudo exploratório de caracterização de área podemos dizer que esta revisão sistemática se caracteriza como uma quasi-sistemática \cite{travassos2008environment}, pois segue o mesmo processo da revisão sistemática e preserva o rigor e mesmo formalismo para as fases metodológicas de elaboração de protocolo e execução da revisão, mas sem a aplicação de uma meta-análise a princípio, que pode ser aplicada posteriormente.
+\par
+\textcolor{red}{Por fim, \citeonline{Martinhago2005} investigou a base de dados sobre os vestibulandos da UFPR de 2003, como os dados dos questionários socioeconômico preenchidos pelos candidatos durante as inscrições, os dados do cadastro geral que contém as notas obtidas da prova e redação e o resultado do vestibualar em conjunto com as notas e média das notas obtidas pelo ENEM, para poder traçar o perfil dos vestibulandos, utilizando a técnica de mineção Árvore de Decisão.}
+
+\par
+\textcolor{red}{A Tabela X visa prestar uma breve comparação entre as características chaves dos trabalhos relacionados e as propostas deste trabalho.}
+
+\par
+\textcolor{red}{Seleção de dados importantes para a base de dados, Eliminação de ruídos e atributos repetidos na base de dados, Transformação dos dados em formato apropriado para mineração, Mineração de dados para extraír informações importantes, Identificação do conhecimento extraído na busca de padrões, Resultados da solução de um possivel problema.}
+
+
+
 
 %==========================================================
 %PLANEJAMENTO DA REVISÃO SISTEMÁTICA
@@ -195,115 +223,3 @@ No contexto & Acadêmico ou industrial para verificação de assertivas na lingu
 	\end{itemize}
 \end{itemize}
 
-\textbf{Escopo da pesquisa:}Na delimitação do escopo da pesquisa foram estabelecidos critérios, buscando garantir a viabilidade da execução, acessibilidade dos dados e abrangência do estudo realizado. A pesquisa dar-se-á a partir de bibliotecas digitais através das suas respectivas máquinas de busca e, quando os dados não estiverem disponíveis eletronicamente, através de consultas manuais.
-
-\textbf{Critérios de Seleção de Fontes.}Para as bibliotecas digitais é desejado:
-\begin{itemize}
-\item Possuir uma máquina de busca que permita o uso de expressões lógicas ou mecanismo equivalente.
-\item Incluir em sua base, publicações de exatas ou correlatas que possuam relação direta com o tema a ser pesquisado
-\item As máquinas de busca deverão permitir a busca no texto completo das publicações.
-\end{itemize}
-
-Segundo \cite{rocha2015verificaccao}, os mecanismos de busca utilizados devem garantir resultados únicos através da busca de um mesmo conjunto de palavras-chaves (string de busca). Quando isto não for possível, deve-se estudar e documentar uma forma de minimizar os potenciais efeitos colaterais desta limitação.
-
-\textbf{Métodos de Busca das Publicações.} As fontes digitais foram acessadas via Web, através de expressões de busca pré-estabelecidas. A biblioteca digital consultada foi a Scopus, acessível em http://www.scopus.com. Segundo a editora \cite{Elsevier}, a Scopus é uma das maiores bases de dados de resumos e citações da literatura de pesquisa \textit{peer-reviewed} com mais de $22,800$ títulos de mais de 5,000 editoras internacionais abrangendo as áreas de tecnologia, medicina, artes, ciências sócias e com atualizações diárias. Entre as editoras podemos citar: Springer \cite{Springer}; IEEE Xplore Digital Library \cite{IEEE};ACM Digital Library \cite{ACM} ; ScienceDirect/Elsevier \cite{B.V}; Wiley Online Library \cite{Sons}; dentre outras.
-
-\textbf{String de Busca.} A string de busca foi definida segundo o padrão PICO (do inglês \textit{Population, Intervention, Comparison, Outcomes}) \cite{kitchenham2009systematic}, conforme a estrutura abaixo:
-\begin{itemize}
-	\item População: Trabalhos publicados em conferências e periódicos que relacionam verificação de propriedades de circuitos lógicos em códigos para a descrição de hardware.
-
-	\item Intervenção: Verificação de propriedades relacionadas a verificação de circuitos para as diferentes estruturas das linguagens de descrição de hardware;
-
-	\item Comparação: análise de cobertura e suporte das abordagens identificadas para a verificação de propriedades das linguagens de descrição de hardware;
-
-	\item Resultados: a partir da descrição das abordagens pretende-se verificar a cobertura que cada abordagem apresenta na manipulação das diferentes estruturas da linguagem de descrição de hardware para a verificação de propriedades baseada em assertivas.
-\end{itemize}
-
-Segundo, \cite{rocha2015verificaccao}, como este estudo representa um estudo de mapeamento/caracterização, a string de busca foi definida de acordo com dois aspectos: População e Intervenção, como é apresentado na estrutura abaixo. Posteriormente esta mesma string de busca será executada na biblioteca Scopus para busca de artigos e publicações de modo a gerar uma interseção entre população e intervenção.
-\begin{itemize}
-\item População: publicações que fazem referência a verificação de propriedades de circuitos lógicos e sinônimos:
-	\begin{itemize}
-	\item \textbf{Palavras-chaves:} "circuit checker" OR "circuit verification" OR "contract based verification" OR "code analysis" OR "static analysis" OR "dynamic analysis" OR "safety verification" OR "RTL analysis" OR "program analysis" OR "property verification" OR "formal verification" OR "model checking" OR "model checker" OR "hardware checker" OR "hardware verification" OR "validity checker" OR "hardware assertion" OR "assertion checker" OR "assert verification" OR "assertion-based verification" OR "assertion based verification" OR "assertion-based design" OR "bit level verification"
-	\end{itemize}
-\item Intervenção: Verificação de circuitos e sinônimos:
-	\begin{itemize}
-	\item \textbf{Palavras-chaves:}"hardware statement" OR "hardware code" OR "hardware source code" OR "hardware semantics" OR "hardware property" OR "logical gates" OR "sequential circuit" OR "parallel circuit" OR "real circuits" OR "complex circuits" OR "control circuitry" OR ”software netlist” OR “hardware emulation” OR “silicon debug”
-	\end{itemize}
-\end{itemize}
-%==========================================================
-%PROCEDIMENTOS DE SELEÇÃO E CRITERIOS
-%==========================================================
-\subsubsection{Procedimentos de Seleção e Critérios}
-
-A estratégia de busca será aplicada por um pesquisador para identificar as publicações em potencial. A seleção das publicações dar-se-á em 4 etapas, porém o terceiro filtro não foi executado nesta etapa do projeto, resumindo-se em apenas 3 etapas:
-\begin{enumerate}
-\item \textbf{Seleção e catalogação preliminar dos dados coletados:}A seleção preliminar das publicações será feita a partir da aplicação da string de busca na biblioteca Scopus, o resultado desta busca corresponde a seleção preliminar. Todas as publicações serão armazenadas para análise posterior;
-
-\item \textbf{Seleção dos dados relevantes - [1 filtro]:} A seleção preliminar com o uso da expressão de busca não garante que todo o material coletado seja útil no contexto da pesquisa, pois a aplicação das expressões de busca é restrita ao aspecto sintático. Por isso, é necessário a criação de filtros de exclusão e inclusão, de modo a classificar os artigos e publicações que se enquadram no contexto da pesquisa realizada. Nesta epata apenas serão lidos o título, abstracts, e palavras-chaves e classificar de acordo com os filtros, ou seja, se será aceito ou excluído. Devem ser excluídas as publicações contidas no conjunto preliminar que:
-	\begin{itemize}
-	\item \textbf{CE1-01:} Não serão selecionadas publicações em que as palavras-chave da busca não apareçam no título, resumo e/ou texto da publicação (excluem-se os seguintes campos: as seções de agradecimentos, biografia dos autores, referências bibliográficas e anexas).
-	\item \textbf{CE1-02:} Não serão selecionadas publicações em que descrevam e/ou apresentam ‘keynote speeches’, tutoriais, cursos e similares.
-	\item \textbf{CE1-03:} Não serão selecionadas publicações em que o contexto das palavras-chave utilizadas no artigo leve a crer que a publicação não cita uma abordagem para verificação/validação de códigos para descrição de hardware.   
-	\item \textbf{CE1-04:} Não serão selecionadas publicações em que o contexto das palavras-chave utilizadas no artigo leve a crer que a publicação não cita uma abordagem para verificação de código de descrição de hardware baseado em assertivas ou propriedades de verificação de hardware.
-\end{itemize}
-
-Podem ser incluídas apenas as publicações contidas no conjunto preliminar que:
-
-	\begin{itemize}
-	\item \textbf{CI1-01:}Podem ser selecionadas publicações em que o contexto das palavras-chave utilizadas no artigo leve a crer que a publicação cita uma abordagem para verificação de código de descrição de hardware baseado em assertivas ou propriedades de verificação de hardware.
-	\item \textbf{CI1-02:}Podem ser selecionadas publicações em que o contexto das palavras-chave utilizadas no artigo leve a crer que a publicação cita recomendações de melhoria na utilização de abordagens para verificação de código de descrição de hardware baseado em assertivas ou propriedades de verificação de hardware.
-	\end{itemize}
-%=======================
-%Filtro 2
-%=======================
-\item \textbf{Seleção dos dados relevantes - [2 filtro]:} Apesar do 1 filtro limitar o universo de busca, infelizmente não há garantias de que todo material selecionado no filtro anterior seja útil no contexto da pesquisa. Neste caso, novos filtros são gerados, buscando, da mesma forma que o primeiro filtro, classificar os artigos e publicações que se enquadram no contexto da pesquisa. Para este filtro é necessário a leitura na integras dos artigos selecionados anteriormente. O objetivo é identificar que relacionam assertivas e/ou propriedade de verificação de hardware.
-    \begin{itemize}
-    \item \textbf{CS2 -ASS -VER\_HARD:} Não devem ser selecionadas publicações que não contextualizem verificação de hardware e não citam assertivas
-    \item \textbf{CS2 +ASS -VER\_HARD:} Não devem ser selecionadas publicações que não contextualizem verificação de hardware, mas citam assertivas
-    \item \textbf{CS2 -ASS +VER\_HARD:} Não devem ser selecionadas publicações que contextualizam verificação de hardware, mas citam assertivas.
-    \end{itemize}
-Dessa forma, todas as publicações devem respeitar o critério abaixo:
-	\begin{itemize}
-	\item \textbf{CS3 +ASS +VER\_HARD:} Serão selecionadas publicações que contextualizam verificação de hardware e citam assertivas em seu contexto.
-	\end{itemize}     	
-\end{enumerate}
-
-\par
-\textcolor{red}{Devido ao tempo necessário para o desenvolvimento execução dos filtros da revisão sistemática serem extensos, apenas o primeiro filtro foi executado neste projeto, mesmo que os parâmetros para o segundo filtro já tenho sido desenvolvidos. Em contra partida foram selecionados 6 artigos que serviram como ferramentas de estudo para o desenvolvimento da metodologia que será apesentada no \autoref{chapter:metodo}.}
-
-%====================================
-%REVISÃO DA LITERATURA
-%====================================
-\section{Revisão da literatura}
-Nesta sessão serão apresentados trabalho relevantes para o desenvolvimento do método proposto. Os artigos apresntam técnicas de transformações de código, utilização de \textit{Assertion-based verification} e PSL para verificação de hardware.
-
-\subsection{V2c-A verilog to C translator}
-O artigo apresenta um ferramenta implementada em C++ chamada \textit{v2c} para conversão de código da linguagem de descrição Verilog para linguagem de programação C. A ferramenta é executada a nivél de palavra, visto que esta abordagem garante uma aumento na escalabilidade, mas também proporionando que tecnicas, como interpolação e aceleração de loop possam ser utilizadas para verificação, algo inviavél, caso a tradução fosse executada a nível de bit. O sistema recebe como entrada um código em Verilg, onde são aplicadas regras semânticas e mapeando os bit de operação, chamado software netlist. Após isso, o código intermediário é convertido para C\cite{mukherjee2016v2c}.
-
-\par
-\textcolor{red}{A contribuição deste trabalho consiste na utilização de transformações de código como base principal e partindo deste pressuposto torna-se vantajoso devido a utilização de outras ferramentas que não apresente suporte a certas linguagens, tais com a ferramenta ESBMC, utilizada neste trabalho, não apresenta suporte a VHDL, porém apresenta suporte as linguagens C/C++. Em outras palavras ,a contribuição deste trabalho foi a utilização de traduções de códigos e utilizado este conceito como modelo de entrada para analise de circuitos.}
-
-\subsection{Unbounded safety verification for hardware using software analyzers}
-No artigo foi apresntado um metodologia essencial para o desenvolvimento deste projeto. O artigo aborda a utilização de técnicas de software e analisadores de software, com o objetivo de utiliação analises de hardware e software para analise de circuitos e com isso trançar um paralelo entre as abordagens. Para testes foram utilizadas três metodologias de analise, usando interpolação, \textit{k-induction} e tecnologias hibrídas. Como resultante dos destes, foi observado as principais causas de erros, por exemplo, bits não preciso e no caso das operações a \textit{bit-level} ocorria perda de informações. Também foi obeservado que apesar de não serem otimizadas para analises de hardware, alguns analisadores de softaware podem, dependendo da técnica utilizada no analisador,  ser tutilizada para analise de hardware\cite{mukherjee2016unbounded}.
-
-\par
-\textcolor{red}{No artigo foi apresentado um metodologia essencial para o desenvolvimento deste projeto, visto que a utilização de técnicas de analise de software para o desenvolvimento de analise de \textit{hardware} é o foco a ser abordado neste projeto de maneira prática. Entretanto, o objetivo deste projeto é a utilização de técnicas de software para analise de circuitos, diferente do artigo apresentado acima que busca utilização uma abordagem mais complexa provando a possibilidade da utilização de técnicas de analise de software no contexto da verificação de hardware.}
-
-\subsection{Formal verification of timed VHDL programs}
-O artigo apresenta analise de tempo relacionado a cada porta lógica dentro o circuito. A métodologia apresenta a traduçao de um circuito lógico codificado em VHDL para um formalismo baseado em automato de tempo. Tal formalismo é representado por uma automato de estados finitos com relogios simbólicos que evoluem em taxa uniforme.A tradução é executada de modo automatico, baseado na emulação da propagação de cada transação ao longo de cada sinal, o seuja, são automatos programados e cronometrados do circuito. Após a tradução para automato, a analise é feita pela ferramenta UPPAL, \textit{Model checking} de verificação de propriedades de tempo. Seguindo esta metodologia a analise pode ser extraida de modo independente de cada bloco, desta forma a anlise é feita de forma mais precisa, podendo ser analisado inumeros fatores, tais como limites de intervalo e sinal de correlação \cite{bara2010formal}.
-
-\par
-\textcolor{red}{O artigo apresenta uma abordagem de tempo, que torna-se interessante adição ao método. Porém até o momento a função não foi implementada ficando a trabalho futuros.}
-
-\subsection{On the use of assertions for embedded-software dynamic verification}
-O artigo apresenta metodologia para de integração dinamica de  \textit{Assertion-based verification} para varias fases de analise da verificação de fluxo em sistemas embarcados, por exemplo, emulação, diagnosticos e \textit{Debug}, mas também um ferramenta chamada \textit{RadCheck}. O metodo de aplicação, chamado \textit{V-model} é dividido em fases de verificação em paralelo com as fases de design do circuito. Com base no \textit{v-Model}, o metodo é aplicado, iniciando com o nível de sistema e as especificação do sistema, neste caso especificado usando PSL. Neste nível é especificado todas as funcionalidaes gerais da aplicação. No nivel de integração visa investigar problemas de interação que possam ocorrer, definindo propriedades que cobrem incrementalmente as unidades estruturais interativas de aplicação. No nível de unidade descrevem comportamentos internos e são definidas através de parâmetros de entrada / saída de unidade e estruturas de dados internas.\cite{di2012use}
-
-\par
-\textcolor{red}{A contribuição deste projeto esta relacionado a utilização de assertivas no contexto da verificação de software. As assertivas são o principal meio de analise proposto neste projeto, visto que estas mesma assertivas serão analisadas pelo ESBMC. Aliado a isso o artigo apresenta modelos de utilização de assertivas no processo de verificação de hardware, e tais assertivas foram adaptadas para um modelo próprio a ser utilizados no contexto deste projeto.}
-
-\subsection{Incorporating efficient assertion checkers into hardware emulation}
-\todo[inline]{Este foi o artigo que menos entendi, então tive uma pequena dificuldade para a escrita deste capitulo.}
-\textcolor{red}{O artigo apresenta uma ferramenta de geração de assertivas no contexto da emulação de circuitos, de modo que estas assertivas descrita em PSL possam transformadas para o modelo de linguagem de descrição de hardware. Inicialmente é realizada toda analise de cada assertiva e a mesma é traduzida em partes, levando em consideração os operadores e cada estrutura, por exemplo if-else, utilizado na declaração da assertiva.\cite{boule2005incorporating}.}
-
-\par
-\textcolor{red}{O artigo apresenta aspectos importantes, tais como a utilização de uma ferramenta para geração de assertivas, o que torna-se no contexto deste projeto, extremamente importante, visto que o modelo adotado atualmente consiste tanto na geração automática das assertivas, bem como a inserção manual por parte do usuário.}
