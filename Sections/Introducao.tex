@@ -18,27 +18,12 @@ Para muitos, uma das etapas mais importante e complexa de todo o método do proc
 A mineração de dados possui varias áreas onde ela é aplicada, uma delas é a mineração de dados educacionais (MDE). O MDE é um campo em desenvolvimento que consiste em examinar uma grande quantidade de dados educacionais com o intuito de obter padrões de dados não triviais. Esse campo utiliza técnicas que verificam padrões em contexto educacional para poder criar parâmetros cognitivos de grande complexidade que proporcione de entender o processo de aprendizado, como por exemplo, na utilização de sistemas que recomendação para aumentar o aprendizado de um determinado estudante durante o seu processo de estudo, no caso, informando em quais conteúdos eles precisam melhorar.
 
 \par
+\textcolor{red}{Dessa forma, dentro deste contexto, esta pesquisa, que tem como caráter exploratorio, visa em criar um modelo preditivo através das técnicas de mineração de dados, Árvore de decição e Associação de Dados, que será aplicada nos dados do questionario socioeconômico dos candidatos que prestaram ao vestibular da Universidade Federal de Roraima no ano de 2017, dados esses que foram fornecidos pelo Comissão Permanente de Vestibular, que tem como intuito de gerar regras para poder criar um perfil e identificar os fatores que causaram o mal desempenho do candidato no resultado da sua prova.}
 
 
 
 
 
-A complexidade de sistemas computacionais cresce exponencialmente. Muitas companhias e organizações estão rotineiramente lidando com software que contêm milhares de linhas de código, escritos por diferentes pessoas, que usam diferentes linguagens, ferramentas, estilos e hardware projetados de diferentes formas e combinações \cite{hoder2011case}. Neste sentido, de sistemas composto de hardware e software temos os sistemas embarcados (SE) que são sistemas computacionais integrados a outros sistemas. Usualmente, o principal propósito dos SE é o controle e provimento de informações para uma função específica \cite{ramesh2012energy}. Os SE são extremamente iterativos com seu ambiente, operam geralmente em tempo real e estão disponíveis continuamente. Adicionalmente, estes sistemas de software e hardware, devido ao curto espaço de tempo de liberação do produto ao mercado, precisam ser desenvolvidos rapidamente e atingir um alto nível de qualidade. Porém, devido a este ao curto espaço de tempo, os programadores cometem enganos durante a fase de desenvolvimento destes sistemas.
-
-\par
-Os dispositivos semicondutores têm se proliferado em grande parte das atividades do nosso cotidiano. Possuem uma quantidade enorme de complexidade e diversidade, devido a esta complexidade, erros podem passar desapercebidos, causando não apenas penalidades econômicas e/ou fracasso do produto no mercado, mas também risco de perda de vidas humanas \cite{cabodi2016hardware}.\textcolor{red}{Como, por exemplo, o acidente noticiado no \cite{g1Acidente} e de acordo com o secretário de transportes, o acidente entre duas composições no metrô de São Paulo foi causado por devido a falha da placa de circuito eletrônico da linha, responsável pelo controle da velocidade os trens.}
-
-\par
-\textcolor{red}{Segundo \cite{rocha2015verificaccao}, para se obter um alto nível de qualidade no desenvolvimento} dos sistemas de hardware e software, a execução destes sistemas deve ser controlada e da mesma forma deve-se buscar formas de garantir que as propriedades definidas sejam atingidas. Por exemplo, a partir do conhecimento prévio do modo de implementação de determinado hardware, é possível utilizar o mesmo de forma mais eficiente. Neste sentido, diversas estratégias de verificação e de teste estão sendo pesquisadas e aplicadas para garantir a qualidade do software e hardware \cite{hoder2010interpolation,rocha2010exploiting,brayton2010abc,cordeiro2012smt,cabodi2016hardware}.
-
-\par
-A verificação formal de sistemas computacionais tem desempenhado um papel importante para assegurar a previsibilidade e a confiabilidade na concepção de aplicações críticas. A técnica \textit{model checking} é uma baseada em métodos formais que são bem conhecidos para provar propriedades de programas reativos. \cite{bensalem1999automatic}. Esta técnica gera uma busca exaustiva no espaço de estados do modelo para determinar se uma dada propriedade é válida ou não\cite{baier2008principles}. A principal razão para o sucesso da técnica \textit{model checking} é que ela funciona completamente automática, ou seja, sem qualquer intervenção do usuário.
-
-\par
-As linguagens de descrição de hardware (HDL) são utilizadas para descrição de circuitos digitais, de modo que os mesmos sejam analisados e otimizados. A principal diferença para as linguagens de programação é que estas linguagens podem gerar execuções não apenas sequenciais, como também concorrentes ou paralelas \cite{chu2006rtl}. Neste contexto, o \textit{VHSIC Hardware Description Language} (VHDL) é uma das linguagens de descrição de hardware mais utilizadas atualmente. A descrição em VHDL pode ser em vários níveis de abstração sendo o mais alto o nível comportamental que permite a descrição co circuito através de \textit{loops} e processos, sendo assim o circuito é definido na forma de algoritmo. Como características das linguagens de descrição, o VHDL permite declarações sequenciais ou concorrentes onde as declarações continuam ativa e sua ordem torna-se irrelevante \cite{cappelattipraticando}.
-
-\par
-Visando contribuir com a verificação de sistemas embarcados no âmbito de sistemas computacionais, o contexto deste trabalho está situado no uso de metodologias e técnicas de verificação formal para programas escritos em VHDL\cite{biere2016aiger}, focando principalmente em \textit{Bounded Model Checking} \cite{cordeiro2012smt,rocha2015model}. Este trabalho está interessado especificamente na parte de: verificação de modelos de hardware descrito em nível de circuitos de bits na linguagem VHDL, via transformações de código para gerar modelos (com assertivas) já suportados por \textit{model checkers}, como o ESBMC\cite{cordeiro2012smt}. Visando analisar propriedades de alcançabilidade para a identificação de localizações de erro, bem como, assertivas contendo propriedades de segurança. A propriedade de alcançabilidade ou propriedade do estado de erro é satisfatória (SAT), se um estado de erro é alcançável. Caso contrário, a propriedade é considerada insatisfatória (UNSAT). No caso SAT, o \textit{model checking} também gerar um rastreio da validação da propriedade, ou seja, uma sequência de estados que mostra como chegar ao estado de erro a partir de um estado inicial.
 
 
 % %===========================================================
@@ -46,10 +31,16 @@ Visando contribuir com a verificação de sistemas embarcados no âmbito de sist
 % %===========================================================
 \section{Motivação}
 
+\textcolor{red}{Recentemente, as faculdades tem cada vez mais armazenado dados sobre os alunos e candidatos que participaram do vestibular, isso se deve, ao  grande aumento da redução dos custos e facilidade para manter essas informações. Este aumento da quantidade de dados, no entanto, dificulta uma pesquisa mais precisa, fazendo com que ocorra o risco de o mesmo se transformar em apenas um acúmulo de informações sem utilidade. }
+
+\par
+\textcolor{red}{Nesse contexto, o uso da Descoberta de Conhecimento em Banco de Dados (KDD) vem ganhando interesse e importância por parte dos donos dessa grande quantidade de dados, pois, as pesquisas obtidas nessa área tem em vista à descoberta de técnicas e tecnologias mais eficientes para a recuperação de dados, procurando encontrar conhecimentos escondido que possam ser úteis, como por exemplo, para as faculdades que podem conhecer melhor os seus alunos atráves dos dados obtido.}
+
+\textcolor{red}{Então, para que se torne possível compreender esses dados que são armazendos, no objetivo de solucionar o problema proposto e de se obter um resultado relevante, este trabalho visa em analisar algumas técnicas de mineração proposta na literatura e selecionar a mais adequada no objetivo de se criar um modelo preditivo para gerar regras que indicará os fatores que influênciam tais alunos em suas notas do vestibular.}
+
+
 \textcolor{red}{A motivação seria através dos dados socioeconômicos saber qual fatores que influência no baixo desempenho dos candidatos e se isso vai influênciar eles nos cursos que escolheram.}
-% O avanço da tecnologia, principalmente nas áreas de design e fabricação, aumentou a importância do hardware nos dias atuais. Cada vez com mais funcionalidade integradas, aliada a velocidade e circuitos menores, faz com que a \textcolor{red}{complexidade dos sistemas de hardware aumente mais e mais.} Entretanto, devido a complexidade cada vez maior, detecção tardia de erros no sistema pode resultar em perda de produção, mas também custos associados ao desenvolvimento do sistema\cite{gupta1992formal}. Devido a isso, a verificação de hardware visa assegurar que o circuito atinja as especificações para o qual foi projetado, através de técnicas formais ou dinâmicas \cite{boule2007efficient}.
-% 
-% \todo[inline]{Adicionar mais texto, ver nos paper do RS.}
+
 
 %===========================================================
 %DEFINIÇÃO DO PROBLEMA
