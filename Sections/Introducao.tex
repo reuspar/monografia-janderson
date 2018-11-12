@@ -39,32 +39,36 @@ A mineração de dados possui varias áreas onde ela é aplicada, uma delas é a
 \textcolor{red}{Então, para que se torne possível compreender esses dados que são armazendos, no objetivo de solucionar o problema proposto e de se obter um resultado relevante, este trabalho visa em analisar algumas técnicas de mineração proposta na literatura e selecionar a mais adequada no objetivo de se criar um modelo preditivo para gerar regras que indicará os fatores que influênciam tais alunos em suas notas do vestibular.}
 
 
-\textcolor{red}{A motivação seria através dos dados socioeconômicos saber qual fatores que influência no baixo desempenho dos candidatos e se isso vai influênciar eles nos cursos que escolheram.}
-
-
 %===========================================================
 %DEFINIÇÃO DO PROBLEMA
 %===========================================================
 \section{Definição do problema}
 
-O avanço da tecnologia, principalmente nas áreas de design e fabricação, aumentou a importância do hardware nos dias atuais. Cada vez com mais funcionalidades integradas, aliada a velocidade e circuitos menores, faz com que a complexidade dos sistemas de hardware aumente. Entretanto, devido à complexidade cada vez maior, detecção tardia de erros no sistema pode resultar em perda de produção, mas também custos associados ao desenvolvimento do sistema\cite{gupta1992formal}. Devido a isso, a verificação de hardware visa assegurar que o circuito atinja as especificações para o qual foi projetado, através de técnicas formais ou dinâmicas \cite{boule2007efficient}.
+\par
+\textcolor{red}{Com uma quantidade enorme de dados armazenado dos alunos pelas faculdade, muitas não sabem de como utiliza-las para o seu aproveito, consequentemente, muitos desses dados acabam ficando acumulados sem nenhuma utilidade. Contudo, muitos desses dados tem uma grande importância para se obter informações preciosas dos candidatos, sendo que se pode identificar problemas para poder tentar relsover alguns deles. Diante disso, como não existe um padrão consolidado para minerar esses dados, este trabalho visa analisar as técnicas de mineração de dados propostas e selecionar a mais adequada para minerar a base de dados da Comissão Permanente de Vestibular, com intuito de coompreender o perfil dos candidatos analisando os fatores que influênciam no seu desempenho no vestibular.}
 
-%Os erros durante o desenvolvimento de sistemas computacionais %tornaram-se mais comuns, em parte devido ao curto espaço de tempo de %sua liberação. Logo, é necessário que as aplicações sejam projetadas %considerando os requisitos de previsibilidade e confiabilidade, %principalmente em aplicações de sistemas embarcados críticos, onde %diversas restrições (por exemplo, tempo de resposta e precisão dos %dados) devem ser atendidas e mensuradas de acordo com os requisitos %do usuário, caso contrário uma falha pode conduzir a situações %catastróficas. 
+\par
+\textcolor{red}{O problema deste trabalho pode então, ser expresso na seguinte questão: \textbf{Como analisar o perfil dos vestibulandos, aplicando técnicas de mineração na base de dados que contém fatores socioeconômicos e cadastro geral do candidato, no sentido de criar um modelo preditivo de tal forma que gere regras através dos dados fornecidos, para poder saber quais fatores que influênciam no seu desempenho na nota  da prova do vestibular? }}
 
-\todo[inline]{Retirei a parte inicial do segundo paragrafo, pois deixou texto muito repetitivo com o anterior. Agora creio que tenha ficado de modo ao segundo paragrafo complementar o primeiro}
-
-\textcolor{red}{ esta razão, a utilização de métodos formais tornou-se uma abordagem atraente para superar as limitações inerentes à validação baseada em simulação. Portanto, a maioria das empresas de semicondutores tem investigado a sua aplicabilidade. Escolhas individuais de métodos, ferramentas e áreas de aplicação das empresas têm variado, assim como o seu nível de sucesso~\cite{cabodi2016hardware}. Com os recentes avanços na escalabilidade de automação dos \textit{model checkers} e nas equivalências sequenciais de verificação, a maioria das empresas têm crescido ao contar com essas técnicas\cite{clarke2008birth}.}
-
-O problema considerado neste trabalho é expresso na seguinte questão: \textbf{Como complementar e aprimorar a verificação de propriedades de segurança em circuitos lógicos, de tal forma que uma propriedade possa ser mapeada em um problema de alcançabilidade simbólica, por exemplo, se é possível alcançar um estado específico (para uma dada propriedade) a partir do estado inicial?}
+%O problema considerado neste trabalho é expresso na seguinte questão: \textbf{Como complementar e aprimorar a verificação de propriedades de segurança em circuitos lógicos, de tal forma que uma propriedade possa ser mapeada em um problema de alcançabilidade simbólica, por exemplo, se é possível alcançar um estado específico (para uma dada propriedade) a partir do estado inicial?}
 
 
 %===========================================================
 %OBJETIVOS GERAIS E ESPECIFICOS
 %===========================================================
-\section{Objetivos}
-O objetivo principal deste trabalho é \textcolor{red}{projetar e analisar um método para efetuar verificação de circuitos, de forma automática, descritos em VHDL} com portas lógicas em nível de bit pela utilização de técnicas de transformação de códigos combinado com a técnica \textit{Bounded Model Checking} para exploração de estados alcançáveis no circuito, visando identificar erros ou comportamentos indevidos ou inesperados que podem resultar no funcionamento incorreto de um dado sistema.
 
-Os objetivos específicos são:
+\section{Objetivo Geral}
+
+\par
+\textcolor{red}{O objetivo principal deste trabalho é de eleger uma técnica de mineração de dados, a partir das técnicas já proposta na literatura, e aplica-la na base de dados do vestibular da UFRR, visando em criar um modelo preditivo que prevê quais os fatores que contribue ou afeta o desempenho na nota da prova do candidato no vestibular.}
+
+
+
+\section{Objetivos Específicos}
+
+Para alcançar o objetivo geral, os seguintes objetivos específicos necessitam ser executados:
+
+
 \begin{enumerate}
   \item Propor um método para especificar pré- e pós-condições de circuitos digitais em nível de portas lógicas descritos em VHDL;
   \item Analisar ferramentas de verificação de modelos que utilização a técnica \textit{Bounded Model Checking};
