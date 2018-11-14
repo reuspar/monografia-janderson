@@ -1,4 +1,41 @@
 \label{chapter:metodo}
+
+\par
+\textcolor{red}{Falar sobre mineração de dados e mineração de dados educacional...}
+
+\par
+\textcolor{red}{No trabalho proposto, para a fase de pré-processamento será analisado o banco de dados do vestibular da Universidade Federal de Roraima (UFRR) do ano de 2017 fornecido pela Comissão Permanente de Vestibular (CPV), que esta encarregada de gerenciar os dados geral dos candidatos inscritos. Para formar a base de dados onde será aplicado a mineração, estará sendo feita a junção dos dados dos questionarios socioeconômico que contém no total de 37 questões e os dados de cadastro geral que são realizados pelos candidatos durante a etapa de inscrição.}
+
+
+\par
+\textcolor{red}{Como em todo banco de dados é normal encontrar inconsistência de dados, como ruídos, itens de dados em branco, valores absurdos e erros de digitação, para grantir a qualidade dos dados, serão necessário corrigir esses problemas para que na hora da mineração não ocorra nenhum erro ou que tenha algum resultado incoerente. Tambem será necessario ser feito a eliminação de atributos repetidos assim como dados inrrelevantes para a pesquisa e dos dados de candidatos que não compareceram para prestar o vestibular.}
+
+\par
+\textcolor{red}{Depois de selecionar e transformar a base de dados em um formato apropriado, será escolhido a técnica de mineração de ávore de decisão para a análise de dados dos candidatos pelo seguinte motivo, que segundo \citeonline{Simon2017}, esta técnica serve como um sistema de suporte a decisão, que é utilizado para aprender funções de classificação que mostra o valor de uma variável dependente por meio de dados de variáveis independentes fornecidos. Para alguns autores a técnica de árvore de decisão é considerada uma das abordagens mais poderasas em mineração de dados e descoberta do conhecimento.}
+
+\par
+\textcolor{red}{Dentre os algoritmos de árvore de decisão, foi optado em utilizar o algoritmo J48, pois, segundo \citeonline{Simon2017} e \citeonline{Martinhago2005} que utilizaram o mesmo algoritmo, o J48 gera a árvore de decisão e a tranforma em regras de classidicação, além de que na literatura é bastante utilizado em aplicações educacionais. O software utilizado para a tarefa de classificação e mineração dos dados é o WEKA que já tem o algoritmo J48 disponível nele, que segundo alguns autores o WEKA é aceito amplamente tanto em empresas como academias tendo uma comunidade muito grande que esta ativa.}
+
+\par
+\textcolor{red}{segundo \citeonline{Amaral2016} algumas vantagens da ferramenta WEKA é que ela é gratuita, madura, com inúmeros algoritmos que executam diversas tarefas de aprendizagem de maquina e possui uma interface interativa, facil de usar não precisando digitar códigos. Para consolidar os dados obtidos pelo algoritmo de árvore de decisão, será aplicado a técnica de associação de dados utilizando o algoritmo apriori, segundo \citeonline{Librelotto2014} ele pode executar varias passagens pelo banco além de trabalhar com um número grande de atributos, tendo como resultado varias alternativas combinadas entre eles atravé das buscas sucessivas em toda a base de dados.}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Este Capítulo descreve o método proposto neste trabalho, baseado em VHDL para analise de circuitos utilizando transformações de código e a ferramenta ESBMC.
 
 \section{Visão geral do método}
