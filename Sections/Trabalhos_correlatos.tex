@@ -175,7 +175,7 @@ Assim como os trabalhos anteriores que são semelhantes a este TCC proposto, o t
 Foram analisados na literatura, trabalhos que discorrem sobre a utilização de mineração de dados em uma base de dados de um vestibular, para a criação de um modelo de classificação ou predição através de regras criadas, a fim de gerar perfis dos candidatos que são aprovados ou saber quais foram os fatores que afetaram ou contribuiram no desempenho do candidato na sua nota da prova.
 
 \par
-Em \cite{Simon2017}, motivados pelos problemas de infraestrutura apresentados pelo Censo Escolar da Educação Básica de 2016, criaram um modelo preditivo que relacionava o perfil socioeconômico dos candidatos fornecidos pelo INEP com a infraestrutura das escolas apresentados pelo PISA para associar ao desempenho dos alunos em exames, no caso, a prova do ENEM.
+Em \citeonline{Simon2017}, motivados pelos problemas de infraestrutura apresentados pelo Censo Escolar da Educação Básica de 2016, criaram um modelo preditivo que relacionava o perfil socioeconômico dos candidatos fornecidos pelo INEP com a infraestrutura das escolas apresentados pelo PISA para associar ao desempenho dos alunos em exames, no caso, a prova do ENEM.
 
 \par
 \citeonline{Silva2014}, em suas pesquisas identificaram fatores que diminuem o desempenho dos candidatos, através da técnica de mineração baseada em regras de associação que utilizavam diferentes parametrizações do algoritmo A Priori. Dados esses utilizados dos questionários socioeconômicos preenchidos pelos candidatos nas edição de 2010 do ENEM da região Sudeste. Essas informações, especificamente as respostas de quatro perguntas, são relacionadas com o resultado de desempenho desses alunos.
@@ -184,44 +184,41 @@ Em \cite{Simon2017}, motivados pelos problemas de infraestrutura apresentados pe
 Por fim, \citeonline{Martinhago2005} investigou a base de dados sobre os vestibulandos da UFPR de 2003, como os dados dos questionários socioeconômico preenchidos pelos candidatos durante as inscrições, os dados do cadastro geral que contém as notas obtidas da prova e redação e o resultado do vestibular em conjunto com as notas e média das notas obtidas pelo ENEM, para poder traçar o perfil dos vestibulandos, utilizando a técnica de mineção Árvore de Decisão.
 
 \par
-A Tabela X visa prestar uma breve comparação entre as características chaves dos trabalhos relacionados e as propostas deste trabalho.
-
-\par
-\textcolor{red}{Seleção de dados importantes para a base de dados, Eliminação de ruídos e atributos repetidos na base de dados, Transformação dos dados em formato apropriado para mineração, Mineração de dados para extraír informações importantes, Identificação do conhecimento extraído na busca de padrões, Resultados da solução de um possivel problema.}
-
-
-
-
-%==========================================================
-%PLANEJAMENTO DA REVISÃO SISTEMÁTICA
-%==========================================================
-\subsection{Planejamento da Revisão Sistemática}
-\textbf{Objetivo:} Este estudo tem o objetivo esquematizado a partir da estrutura do paradigma GQM (do ingles \textit{Goal,Question and Metric})\cite{basili1994experience}.
+A Tabela 1 visa prestar uma breve comparação entre as características chaves dos trabalhos relacionados e as propostas deste trabalho.
 
 \begin{table}[h!]
+\caption{Comparação entre os trabalhos correlacionados e a proposta deste trabalho.}
 \centering
-\label{}
-\begin{tabularx}{\textwidth}{|l|X|}
-\hline
-Analisar & Publicações científicas através de um estudo baseado em revisão sistemática \\ \hline
-Com propósito de & Identifica-las \\ \hline
-Com relação as & Vantagens e desvantagens da utilização de assertiva e transformações de código na verificação do código na linguagem de descrição VHDL \\ \hline
-Do ponto de vista do & Pesquisador \\ \hline
-No contexto & Acadêmico ou industrial para verificação de assertivas na linguagem de descrição VHDL \\ \hline
-\end{tabularx}
-\caption{Objetivo do estudo utilizando o paradigma GQM}
+\begin{tabular}{c c c c c c c}
+\hline \vspace{0.1cm}
+      & PAB & EF & WE & TC & CT & TA \\ \hline 
+    \vspace{0.1cm} \citeonline{Simon2017} & X & X & X &  &  & X \\ 
+    \vspace{0.1cm} \citeonline{Silva2014} & X & X &   & X &  & X \\
+    \vspace{0.1cm} \citeonline{Martinhago2005} & X &   & X & X &  &  \\
+    \vspace{0.1cm} Este Trabalho & X & X & X & X & X & X \\ \hline 
+\end{tabular}
 \end{table}
 
-\textbf{Formulação da Pergunta:} Buscamos respostas para as seguintes perguntas:
+\par
 \begin{itemize}
-\item \textbf{Q1:} Quais são os métodos para verificação de circuitos lógicos descritos na linguagem de programação VHDL?
-	\begin{itemize}
-	\item \textbf{Q1.1:} Foi desenvolvido e está disponível alguma ferramenta para aplicação do método?
-	\item \textbf{Q1.2:} Qual a técnica de exploração de estados para circuitos lógicos?
-	\item \textbf{Q1.3:} O método proposto é baseado em técnicas de verificação de software?
-	\item \textbf{Q1.4:} Como o método proposto valida pré e pós condições no programa?
-	\item \textbf{Q1.3:} Foi utilizado algum \textit{benchmark} de programas em VHDL para experimentação e o mesmo encontra-se disponível?
-	\item \textbf{Q1.4:} Quais as perspectivas futuras para melhorar da aplicação do método proposto?
-	\end{itemize}
+%\item \textbf{Q1:} Quais são os métodos para verificação de circuitos lógicos descritos na linguagem de programação VHDL?
+	%\begin{itemize}
+	\item \textbf{PAB:} Pré-processamento e análise do banco de dados.
+	\item \textbf{EF:} Extração das \textit{features}.
+	\item \textbf{WE:} Utilização da ferramenta WEKA para a extração de dados.
+	\item \textbf{TC:} Utilização de técnicas de mineração de dados para gerar um modelo de classificação.
+	\item \textbf{CT:} Foi feito um comparativo entre as técnicas de mineração para saber qual foi a mais eficiente.
+	\item \textbf{TA:} Utilização de técnicas para avaliar os resultados obtidos.
+	%\end{itemize}
 \end{itemize}
+
+
+
+
+
+
+%1.Pré-processamento e analise da base de dados dos candidatos.
+%2.Adotar um algoritmo de aprendizagem de máquina para identificar os fatores que influên-ciam o desempenho dos candidatos.
+%3.Definir e aplicar uma técnica de associação de dados, para consolidar os dados dos fatoresde desempenho dos candidatos.
+%4.  Definir métodos e técnicas para validar os resultados obtidos.
 
