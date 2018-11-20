@@ -9,7 +9,7 @@ O sucessivo avanço da tecnologia em nossa sociedade, o número de dados gerados
 Diante desse cenário com uma grande quantidade de informações, surge a necessidade de se utilizar técnicas e ferramentas computacionais para administrar, gerenciar e analisar tais informações. No mundo em que vivemos, atualmente vem crescendo a participação dos computadores na sociedade em inúmeros ramos de atividades como social, científica, saúde e econômica, sendo que já existe computadores que armazenam o que foi efetuado, medido, calculado e decidido desses serviços. Contudo, muito dessas decisões que são tomadas, não se tem o conhecimento suficiente das informações que provém dos dados acumulados em bases de dados de sistemas transacionais \cite{Rabelo2007}.
 
 \par
-Com base nisso, para atender esse contexto, surgiu uma nova área conhecida como Descoberta do Conhecimento em Banco de Dados (KDD), uma área da computação que tem como intuito de buscar e extrair informações úteis a respeito dos dados. Em vários casos, esse processo pode ser longo e trabalhoso \cite{Stulp2014}. O KDD é descrito como um processo bastante complexo onde tem como objetivo de extrair o conhecimento gerado de grande quantidade de dados, além de que, na sua estrutura é composto por três etapas principais: pré-processamento, mineração de dados e pós-processamento \cite{Rabelo2007}.
+Com base nisso, para atender esse contexto, surgiu uma nova área conhecida como \textit{Knowledge Discovery in Database} (KDD), uma área da computação que tem como intuito de buscar e extrair informações úteis a respeito dos dados. Em vários casos, esse processo pode ser longo e trabalhoso \cite{Stulp2014}. O KDD é descrito como um processo bastante complexo onde tem como objetivo de extrair o conhecimento gerado de grande quantidade de dados, além de que, na sua estrutura é composto por três etapas principais: pré-processamento, mineração de dados e pós-processamento \cite{Rabelo2007}.
 
 \par
 Para muitos, uma das etapas mais importante e complexa de todo o método do procedimento de descoberta do conhecimento é a etapa de mineração de dados (MD). O MD utiliza de ferramentas e técnicas no objetivo de procurar encontrar dados importantes que estão ocultos em uma enorme quantidade de dados absorvidos por um banco de dados para poder dar suporte à tomada de decisão. O processo de mineração de dados segue as seguintes etapas: o reconhecimento do problema, o pré-processamento dos dados, a extração de padrões dos dados obtidos, a definição de uma tarefa e a escolha do algoritmo adequado para a mineração e o pós-processamento que inclui a análise dos resultados obtidos \cite{Stulp2014}. 
@@ -18,7 +18,7 @@ Para muitos, uma das etapas mais importante e complexa de todo o método do proc
 A mineração de dados possui várias áreas onde ela é aplicada, uma delas é a mineração de dados educacionais (MDE), que é um campo em desenvolvimento que consiste em examinar uma grande quantidade de dados educacionais com o intuito de obter padrões de dados não triviais. Esse campo utiliza técnicas que verificam padrões em contexto educacional para poder criar parâmetros cognitivos de grande complexidade que proporcione de entender o processo de aprendizado, como por exemplo, na utilização de sistemas que recomendação para aumentar o aprendizado de um determinado estudante durante o seu processo de estudo, no caso, informando em quais conteúdos eles precisam melhorar.
 
 \par
-\textcolor{red}{Dessa forma, dentro deste contexto, esta pesquisa, visa criar um modelo de classificação para os candidatos que prestaram o vestibular da Universidade Federal de Roraima,  que tem como intuito de gerar regras para poder criar um perfil e identificar os fatores que causam o mal desempenho do candidato no resultado da sua prova através das técnicas de mineração de dados, aprendizagem de máquina e associação de dados, no que vai contribuir...}
+\textcolor{red}{Dessa forma, dentro deste contexto, esta pesquisa, visa criar um modelo de classificação para os candidatos que prestaram o vestibular da Universidade Federal de Roraima,  que tem como intuito de gerar regras para poder criar um perfil e identificar os fatores que causam o mal desempenho do candidato no resultado da sua prova através das técnicas de mineração de dados, aprendizagem de máquina e associação de dados, no que vai contribuir para que a UFRR, MEC e o ministério do desenvolvimento social tome alguma atitude através dos perfis gerados, tanto como avaliar a estratégia do plano de ensino nas escolas como tentar de alguma forma, solucionar os problemas socioeconômicos dos candidatos que foram encontrado.}
 
 
 
@@ -31,10 +31,10 @@ A mineração de dados possui várias áreas onde ela é aplicada, uma delas é 
 % %===========================================================
 \section{Motivação}
 
-Recentemente, as faculdades têm cada vez mais armazenado dados sobre os alunos e candidatos que participaram do vestibular, isso se deve, ao  grande aumento da redução dos custos e facilidade para manter essas informações. Este aumento da quantidade de dados, no entanto, dificulta uma pesquisa mais precisa, fazendo com que ocorra o risco de o mesmo se transformar em apenas um acúmulo de informações sem utilidade. 
+Recentemente, as universidades têm cada vez mais armazenado dados sobre os alunos e candidatos que participaram do vestibular, isso se deve, ao  grande aumento da redução dos custos e facilidade para manter essas informações. Este aumento da quantidade de dados, no entanto, dificulta uma pesquisa mais precisa, fazendo com que ocorra o risco de o mesmo se transformar em apenas um acúmulo de informações sem utilidade. 
 
 \par
-Nesse contexto, o uso da Descoberta de Conhecimento em Banco de Dados (KDD) vem ganhando interesse e importância por parte dos donos dessa grande quantidade de dados, pois, as pesquisas obtidas nessa área tem em vista à descoberta de técnicas e tecnologias mais eficientes para a recuperação de dados, procurando encontrar conhecimentos escondido que possam ser úteis, como por exemplo, para as faculdades que podem conhecer melhor os seus alunos através dos dados obtido.
+Nesse contexto, o uso do KDD vem ganhando interesse e importância por parte dos donos dessa grande quantidade de dados, pois, as pesquisas obtidas nessa área tem em vista à descoberta de técnicas e tecnologias mais eficientes para a recuperação de dados, procurando encontrar conhecimentos escondido que possam ser úteis, como por exemplo, para as universidades que podem conhecer melhor os seus alunos através dos dados obtido.
 
 No que se torna possível compreender esses dados que são armazenados, no objetivo de solucionar o problema proposto e de se obter um resultado relevante, este trabalho visa em analisar algumas técnicas de mineração proposta na literatura e selecionar a mais adequada no intuito de se criar um modelo de classificação para gerar regras que indicará os fatores que influenciam tais alunos em suas notas do vestibular.
 
@@ -45,10 +45,10 @@ No que se torna possível compreender esses dados que são armazenados, no objet
 \section{Definição do problema}
 
 \par
-Com uma quantidade enorme de dados armazenado dos alunos pelas faculdades, muitas não sabem de como utiliza-las para o seu aproveito, consequentemente, muitos desses dados acabam ficando acumulados sem nenhuma utilidade. Contudo, muitos desses dados têm uma grande importância para se obter informações preciosas dos candidatos, sendo que se pode identificar problemas para poder tentar resolver alguns deles. Diante disso, como não existe um padrão consolidado para minerar esses dados, este trabalho visa analisar as técnicas de mineração de dados propostas e selecionar a mais adequada para minerar a base de dados da Comissão Permanente de Vestibular, com intuito de compreender o perfil dos candidatos analisando os fatores que influenciam no seu desempenho no vestibular.
+Com uma quantidade enorme de dados armazenado dos alunos pelas universidades, muitas não sabem de como utiliza-las para o seu aproveito, consequentemente, muitos desses dados acabam ficando acumulados sem nenhuma utilidade. Contudo, muitos desses dados têm uma grande importância para se obter informações preciosas dos candidatos, sendo que se pode identificar problemas para poder tentar resolver alguns deles. Diante disso, como não existe um padrão consolidado para minerar esses dados, este trabalho visa analisar as técnicas de mineração de dados propostas e selecionar a mais adequada para minerar a base de dados da Comissão Permanente de Vestibular, com intuito de compreender o perfil dos candidatos analisando os fatores que influenciam no seu desempenho no vestibular.
 
 \par
-O problema deste trabalho pode então, ser expresso na seguinte questão: \textbf{Como analisar o perfil dos vestibulandos, utilizando uma base de dados que contém fatores socioeconômicos e cadastro geral do candidato, no sentido de criar um modelo de classificação de tal forma que se identifique quais fatores que influenciam no seu desempenho na nota  da prova do vestibular? }
+O problema deste trabalho pode então, ser expresso na seguinte questão: \textbf{Como analisar o perfil dos vestibulandos, utilizando uma base de dados que contém fatores socioeconômicos e cadastro geral do candidato, no sentido de criar um modelo de classificação de tal forma que se identifique quais fatores que influenciam no seu desempenho da nota  da prova do vestibular? }
 
 
 %===========================================================
@@ -57,7 +57,7 @@ O problema deste trabalho pode então, ser expresso na seguinte questão: \textb
 
 \section{Objetivo Geral}
 
-O objetivo geral deste trabalho é de criar um modelo de classificação através do banco de dados dos candidatos inscritos para o vestibular da Universidade Federal de Roraima, com o intuito de criar regras que se possa gerar um perfil e identificar os fatores que influenciam o desempenho dos candidatos no resultado na nota do vestibular através de técnicas de mineração de dados, aprendizagem de máquina e associação de dados.
+O objetivo geral deste trabalho é de criar um modelo de classificação através do banco de dados dos candidatos inscritos para o vestibular da Universidade Federal de Roraima, com o intuito de criar regras que se possa gerar um perfil e identificar os fatores que influenciam o desempenho dos candidatos no resultado da nota do vestibular através de técnicas de mineração de dados, aprendizagem de máquina e associação de dados.
 
 
 \section{Objetivos Específicos}
@@ -66,7 +66,7 @@ Para alcançar o objetivo geral, os seguintes objetivos específicos necessitam 
 
 
 \begin{enumerate}
-  \item Pré-processamento e analise da base de dados dos candidatos.
+  \item Seleção e análise da base de dados dos candidatos.
   \item Adotar um algoritmo de aprendizagem de máquina para identificar os fatores que influenciam o desempenho dos candidatos.
   \item Definir e aplicar uma técnica de associação de dados, para consolidar os dados dos fatores de desempenho dos candidatos.
   \item Definir métodos e técnicas para validar os resultados obtidos.
@@ -77,9 +77,9 @@ Para alcançar o objetivo geral, os seguintes objetivos específicos necessitam 
 %===========================================================
 \section{Metodologia proposta}
 
-\textcolor{red}{Este trabalho utilizou o processo de mineração de dados com técnicas de aprendizagem de máquina para ser aplicado a uma base de dados que contém os dados de cadastro geral e socioeconômico dos candidatos que prestaram o vestibular da Universidade Federal de Roraima no ano de 2017, com a finalidade de extrair conhecimentos relevantes dos candidatos dessa base de dados.}
+Este trabalho utilizou o processo de mineração de dados com técnicas de aprendizagem de máquina para ser aplicado a uma base de dados que contém os dados de cadastro geral e socioeconômico dos candidatos que prestaram o vestibular da Universidade Federal de Roraima no ano de 2017, com a finalidade de extrair conhecimentos relevantes dos candidatos dessa base de dados.
 
-\textcolor{red}{Para desenvolver este trabalho foram definidas algumas etapas, sendo que a primeira está relacionada mais a fundamentação do trabalho, onde foram conceituados e pesquisados os temas abordados nele, na segunda etapa o foco esteve nas ferramentas e técnicas de mineração e aprendizagem de máquina que podem ser utilizadas, já na terceira etapa consiste na modelagem do projeto e na última etapa lidou com a documentação do TCC.}
+Para desenvolver este trabalho foram definidas algumas etapas, sendo que a primeira está relacionada mais a fundamentação do trabalho, onde foram conceituados e pesquisados os temas abordados nele, na segunda etapa o foco esteve nas ferramentas e técnicas de mineração e aprendizagem de máquina que podem ser utilizadas, já na terceira etapa consiste na modelagem do projeto e finalmente a última etapa tratou da elaboração da documentação do TCC.
 
 
 
@@ -105,10 +105,10 @@ A introdução deste trabalho apresentou: o contexto, definição do problema, o
 No \autoref{chapter:conceitos} \textbf{Conceitos e Definições}, são apresentados os conceitos abordados neste trabalho, especificamente: \textit{Knowledge Discovery in Database} (KDD), Mineração de Dados, Aprendizagem de Máquina e Mineração de Dados Educacionais.
 
 \par
-No \autoref{chapter:correlatos} \textbf{Trabalhos Correlatos}, será apresentado o método de pesquisa utilizado, mas também, os resultados alcançados com a pesquisa, análise dos artigos e a contribuição dos mesmos para o desenvolvimento do método apresentado neste trabalho.
+No \autoref{chapter:correlatos} \textbf{Trabalhos Correlatos}, será apresentado os resultados alcançados de outras pesquisas similares, analisando artigos, dissertações e trabalho econclusão de curso e ressaltando a contribuição dos mesmos para o desenvolvimento deste trabalho.
 
 \par
-No \autoref{chapter:metodo} \textbf{Método Proposto}, é descrito as etapas de execução do novo método proposto. \textcolor{red}{Em especial, são descritos o método de transformação do código, a utilização das assertivas e a integração da ferramenta ESBMC no contexto do método}.
+No \autoref{chapter:metodo} \textbf{Método Proposto}, é descrito as etapas de execução do método proposto. \textcolor{red}{Em especial, são descritos o método de transformação do código, a utilização das assertivas e a integração da ferramenta ESBMC no contexto do método}.
 
 \par
 No \autoref{chapter:cronograma} \textbf{Cronograma}, é apresentado o cronograma de desenvolvimento das atividades que serão realizadas no TCC I e II. %descreve-se a execução de uma avaliação experimental sobre o método proposto, bem como, 
